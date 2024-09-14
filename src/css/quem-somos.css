@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../webfonts/Gotham-Black.eot');
+    src: local('Gotham-Black'),
+         url('../webfonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+         url('/src/font/Gotham-Black.woff2') format('woff2'),
+         url('/src/font/Gotham-Black.woff') format('woff'),
+         url('../webfonts/Gotham-Black.ttf') format('truetype'),
+         url('../webfonts/Gotham-Black.svg#Gotham-Black') format('svg');
+} 
+
+@font-face {
+    font-family: "Gotham-Ultra";
+    src: url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.eot");
+    src: url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.svg#Gotham-Ultra") format("svg");
+}
+
+@font-face {
+    font-family: 'Vintages';
+    src: url('/src/font/Vintages.woff2') format('woff2'),
+        url('/src/font/Vintages.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('/src/font/Gotham-Light.woff2') format('woff2'),
+        url('/src/font/Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100vh;
+    font-family: 'Gotham Black';
+}
+
+body{
+    background-color: #012130;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Gotham Black';
+    
+}
+/*ESTILIZAÇÃO DO MENU*/
+header {
+    background-attachment: fixed;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    transition: .5s;
+    
+}
+
+header.rolagem{
+    background-color: #012130df;
+    padding: 20px 4%;
+    
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    
+}
+
+.logo img {
+    width: auto;
+    height: 170px;
+    display: block;
+    max-width: none;
+    position: relative;
+    top: -60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding-right: 40px;
+    font-size: 16px;
+    position: relative;
+    margin-right: auto;
+
+    
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 1px;
+    background-image: linear-gradient(45deg, white,white);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.menu nav a:hover::after{
+    width: 60%;
+}
+
+.menu nav:hover a {
+    opacity: 0.3;
+}
+
+.menu nav a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/*FIM DA ESTILIZAÇÃO DO MENU*/
+
+/*ESTILIZAÇÃO DO BANNNER QUEM SOMOS*/
+.banner2{
+    background-image: url(/src/img/layout-sobre.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*FIM DA ESTILIZAÇÃO DO BANNER QUEM SOMOS*/
+
+/*ESTILIZAÇÃO DA SESSÃO QUEM SOMOS*/
+.sobre{
+    margin-bottom: 50px;
+}
+.sobre .container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adiciona centralização horizontal */
+}
+
+.sobre .sobre-texto {
+    width: 60%;
+    padding: 0 40px;
+    text-align: center; /* Adiciona centralização do texto */
+}
+
+.sobre .sobre-texto h1 {
+    font-size: 50px;
+    font-family: "Gotham-Ultra";
+    color:  #9aeca4;
+    text-align: justify;
+}
+.sobre .sobre-texto h1 span{
+    font-family: "Gotham-Ultra";
+}
+
+.sobre .sobre-texto p {
+    font-size: 19px;
+    margin: 5px 0 10px 0;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.886);
+    font-family: 'Gotham';
+    
+}
+
+.sobre .sobre-texto p span{
+    color:  #9aeca4;
+    font-weight: bold;
+}
+
+.valores{
+    background-color: #9aeca4;
+}
+
+.valores .container{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adiciona centralização horizontal */
+}
+
+.valores .sobre-texto{
+    width: 60%;
+    padding: 0 40px;
+    text-align: center; /* Adiciona centralização do texto */
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.valores .sobre-texto h1{
+    font-size: 50px;
+    font-family: "Gotham-Ultra";
+    color: #012130;
+    text-align: justify;
+}
+.valores .sobre-texto p{
+    font-size: 15px;
+    margin: 5px 0 10px 0;
+    text-align: justify;
+    color: #012130;
+    font-family: 'Gotham';
+}
+
+/*FIM DA ESTILIZAÇÃO DE QUEM SOMOS*/
+
+/*INICIO DA ESTILIZAÇÃO DE QUEM SOMOS*/
+.equipe .container{
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip{
+    position: relative;
+    display: flex;
+}
+.tooltip img{
+    height: 400px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 3px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.equipe .content,
+.equipe .content1,
+.equipe .content2 {
+    width: 300px;
+    background: #9aeca4;
+    padding: 20px;
+    position: absolute;
+    top: 30%;
+    border-radius: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #012130b4; /* Alterando a cor do texto */
+}
+
+.equipe .content {
+    left: 220px; /* Move o balão para a esquerda */
+    top: 35%;
+}
+
+.equipe .content1 {
+    left: 440px; /* Centraliza o balão */
+}
+
+.equipe .content2 {
+    left: 670px; /* Move o balão para a direita */
+}
+
+.equipe .content p, .content1 p, .content2 p {
+    line-height: 1.4;
+}
+
+.equipe .content::before, .content1::before, .content2::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #9aeca4;
+    bottom: 0;
+    left: -12.5px;
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+}
+
+img:nth-of-type(1):hover + .content,
+img:nth-of-type(2):hover + .content1,
+img:nth-of-type(3):hover + .content2 {
+    visibility: visible;
+    opacity: 1;
+}
+/*FIM DA ESTILIZAÇÃO DA EQUIPE*/
+
+/*ESTILIZAÇÃO DO FOOTER*/
+.footer {
+    background-color: #13678b40;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: 'Gotham';
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer i {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.footer i:hover {
+    color: lightgray;
+}
+
+/*FIM DA ESTILIZAÇÃO DO FOOTER*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+}

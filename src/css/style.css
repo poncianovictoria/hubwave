@@ -1,0 +1,445 @@
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('../webfonts/Gotham-Black.eot');
+    src: local('Gotham-Black'),
+         url('../webfonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+         url('/src/font/Gotham-Black.woff2') format('woff2'),
+         url('/src/font/Gotham-Black.woff') format('woff'),
+         url('../webfonts/Gotham-Black.ttf') format('truetype'),
+         url('../webfonts/Gotham-Black.svg#Gotham-Black') format('svg');
+} 
+
+@font-face {
+    font-family: "Gotham-Ultra";
+    src: url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.eot");
+    src: url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.eot?#iefix") format("embedded-opentype"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.woff") format("woff"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.ttf") format("truetype"),
+         url("https://db.onlinewebfonts.com/t/34abfd1ab1319100e46597c745b7f434.svg#Gotham-Ultra") format("svg");
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('/src/font/Gotham-Light.woff2') format('woff2'),
+        url('/src/font/Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html {
+    height: 100vh;
+    scroll-behavior: smooth;
+    font-family: 'Gotham Black';
+    
+
+}
+
+body{
+    background-color: #012130;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+/*ESTILIZAÇÃO DO MENU*/
+header {
+    background-attachment: fixed;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    transition: .5s;
+    z-index: 1000;
+    
+}
+
+header.rolagem{
+    background-color: #012130df;
+    padding: 20px 4%;
+    
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    
+}
+
+.logo img {
+    width: auto;
+    height: 170px;
+    display: block;
+    max-width: none;
+    position: relative;
+    top: -60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding-right: 40px;
+    font-size: 16px;
+    position: relative;
+    margin-right: auto;
+
+    
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 1px;
+    background-image: linear-gradient(45deg, white,white);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.menu nav a:hover::after{
+    width: 60%;
+}
+
+.menu nav:hover a {
+    opacity: 0.3;
+}
+
+.menu nav a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/*FIM DA ESTILIZAÇÃO DO MENU*/
+
+/*ESTILIZAÇÃO DAS CASES*/
+.case{
+    
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center;
+    padding-top: 60px;
+    background-color:  #9aeca4;
+}
+.case img{
+    width: 400px;
+    border-radius: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    justify-content: center;
+}
+/*FIM DA ESTILIZAÇÃO DAS CASES*/
+
+/*ESTILIZAÇÃO DO LAYOUT*/
+.banner{
+    background-image: url(/src/img/inicial.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1{
+    font-size: 4em;
+    color:  #9aeca4;
+}
+/*FIM DA ESTILIZAÇÃO DO LAYOUT*/
+
+/*ESTILIZAÇÃO DE ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid  #9aeca4; /* Ajuste a espessura e a cor conforme necessário */
+    border-bottom: 1px solid  #9aeca4; /* Ajuste a espessura e a cor conforme necessário */
+}
+
+.especialidades .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.especialidades .especialidades-box i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 23px;
+}
+
+.especialidades .especialidades-box p{
+    font-size: 13px;
+    color:  #45c4af;
+}
+
+/*FIM DA ESTILIZAÇÃO DE ESPECIALIDADES*/
+
+/*ESTILIZAÇÃO DO CARROSSEL*/
+@keyframes slide{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    height: 250px;
+    padding: 60px 0;
+    padding-top: 100px;
+    background-color: #9aeca4;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+.logos-slide img{
+    height: 50px;
+    margin: 0 40px;
+}
+/*FIM DA ESTILIZAÇÃO DO CARROSSEL*/
+
+/*ESTILIZAÇÃO DO FORMULÁRIO*/
+section.formulario{
+    padding: 10px 4%;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 100px;
+    max-width: 700px; /* Definindo a largura máxima do formulário */
+    margin-left: 30%;
+    
+}
+
+.formulario .imagem img{
+    padding-right: 200px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    height: 700px;
+    
+}
+
+section .interface2{
+    background-color:  #13678b23;
+    border-radius: 30px;
+    height:550px;
+    width: 700px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: right;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: 'Gotham Black';
+    
+
+}
+
+h2.titulo span{
+    color:   #9aeca4;
+    font-family: 'Gotham Black';
+}
+
+.texto-lateral {
+    width: 400px;
+    margin-top: 100px; /* Ajusta a margem superior para descer o texto */
+    margin-left: -200px;
+
+}
+.texto-lateral h1{
+    width: 350px;
+    color:   #9aeca4;
+    font-size: 50px;
+    font-family: "Gotham-Ultra";
+    padding-bottom: 20px;
+}
+
+.texto-lateral p{
+    font-family: 'Gotham';
+    font-size: 16px;
+
+}
+
+.texto-lateral a{
+    color: #9aeca4;
+    text-decoration: none;
+
+}
+
+form{
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+/* nova edição que adicionei assistindo o video ingles*/
+.span-required{
+    font-size: 12px;
+    color: #fff;
+    margin: 3px 0 0 1px;
+    display: none;
+    font-family: 'Gotham';
+}
+/* até aqui*/
+
+form input, form textarea{
+    width: 450px;
+    background-color: #13678b44;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Gotham';
+    height: 30px;
+    
+}
+
+form input::placeholder{
+    color: #ffffff50;
+}
+
+form textarea{
+    resize: none;
+    height: 200px;
+    font-family: 'Gotham Back', sans-serif;
+    font-size: 15px;
+}
+form textarea::placeholder{
+    font-family: 'Gotham Back', sans-serif;
+    color: #ffffff50;
+}
+
+form input:focus, form textarea:focus {
+    border: 2px solid transparent; /* Tornando a borda transparente */
+    box-shadow: 0 0 10px #45c4af51, 0 0 20px #45c4af51, 0 0 40px #45c4af51, 0 0 80px #45c4af51; /* Adicionando o efeito de sombra */
+}
+
+form .btn-enviar{
+    margin-top: 10px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color:  #9aeca4;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2;
+    padding-bottom: 30px;
+}
+
+form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px  #45c4af;
+    transform: scale(1.05);
+}
+/*FIM DA ESTILIZAÇÃO DO FORMULARIO*/
+
+/*ESTILIZAÇÃO DO FOOTER*/
+.footer {
+    background-color: #13678b40;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: 'Gotham';
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer i {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.footer i:hover {
+    color: lightgray;
+}
+
+/*FIM DA ESTILIZAÇÃO DO FOOTER*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+}
